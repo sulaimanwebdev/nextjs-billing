@@ -3,7 +3,7 @@ import { resend } from '@/lib/resend';
 export const sendVerificationRequest = async (
   param
 ) => {
-  const { identifier, url, provider, theme } = params
+  const { identifier, url, provider, theme } = param
   const { host } = new URL(url)
   try {
     await resend.emails.send({
